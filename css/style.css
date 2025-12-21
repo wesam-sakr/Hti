@@ -737,6 +737,77 @@ nav.navbar {
 .counters .counterName {
    margin-bottom: .75rem;
 }
+
+
+/* ------------- projects sections --------------- */
+.projects .row:nth-child(even) {
+   flex-direction: row-reverse;
+}
+
+.projects .proj-details {
+   display: flex;
+   padding: 2.4rem 3rem 2.6rem 3rem;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: .7rem;
+   border-radius: 24px;
+   background: #ECF1F9;
+   margin-inline: -20px;
+   z-index: 0;
+   position: relative;
+}
+
+.projects .proj-details .proj-num {
+   display: flex;
+   width: 2rem;
+   aspect-ratio: 1/1;
+   font-size: 1.1rem;
+   font-weight: bold;
+   justify-content: center;
+   align-items: center;
+   background: #D9E2F2;
+   color: var(--main);
+   border-radius: 50%;
+   -webkit-border-radius: 50%;
+   -moz-border-radius: 50%;
+   -ms-border-radius: 50%;
+   -o-border-radius: 50%;
+}
+
+.projects .proj-details .proj-desc {
+   color: #434343;
+   font-size: .85rem;
+}
+
+.projects .proj-img {
+   position: relative;
+   border-radius: 1.5rem;
+   -webkit-border-radius: 1.5rem;
+   -moz-border-radius: 1.5rem;
+   -ms-border-radius: 1.5rem;
+   -o-border-radius: 1.5rem;
+   overflow: hidden;
+}
+
+.projects .proj-img img {
+   width: 100%;
+   aspect-ratio: 8 / 5;
+   object-position: center;
+}
+
+.projects .proj-img img {
+   aspect-ratio: 8 / 5;
+   object-position: center;
+}
+
+.projects .proj-img:hover img {
+   transform: scale(1.1);
+   -webkit-transform: scale(1.1);
+   -moz-transform: scale(1.1);
+   -ms-transform: scale(1.1);
+   -o-transform: scale(1.1);
+}
+
 /* ------------- industries sections --------------- */
 .counters,
 .industries {
