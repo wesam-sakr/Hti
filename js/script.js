@@ -19,45 +19,49 @@ $('#loading').fadeOut(3000);
 // make navbar fixed while scrolling
 $(document).ready(function () {
 
-  // 1) تقسيم كل جملة لـ حروف داخل span
-  $(".scroll-text").each(function () {
-    let text = $(this).text().trim();
-    let html = "";
-    for (let i = 0; i < text.length; i++) {
-      html += `<span>${text[i]}</span>`;
-    }
-    $(this).html(html);
-  });
+  if($(".scroll-text").length>0){
+    // 1) تقسيم كل جملة لـ حروف داخل span
+    $(".scroll-text").each(function () {
+      let text = $(this).text().trim();
+      let html = "";
+      for (let i = 0; i < text.length; i++) {
+        html += `<span>${text[i]}</span>`;
+      }
+      $(this).html(html);
+    });
+  
+    // 2) التلوين مع الاسكرول
+    $(window).on("scroll", function () {
+  
+      let section = $("#text-section");
+      let offsetTop = section.offset().top;
+      let sectionHeight = section.outerHeight();
+      let scrollPos = $(window).scrollTop();
+      let windowHeight = $(window).height();
+  
+      // نسبة دخول السكشن (0 → 1)
+      let progress = (scrollPos + windowHeight - offsetTop) / (sectionHeight + windowHeight);
+  
+      if (progress < 0) progress = 0;
+      if (progress > 1) progress = 1;
+  
+      // اجمع كل الحروف
+      let allChars = section.find("span");
+      let charsCount = allChars.length;
+  
+      // عدد الحروف اللي تتلون
+      let coloredChars = Math.floor(charsCount * progress);
+  
+      // شيل التلوين من الكل
+      allChars.removeClass("active");
+  
+      // فعّل التلوين حسب التقدم
+      allChars.slice(0, coloredChars).addClass("active");
+  
+    });
 
-  // 2) التلوين مع الاسكرول
-  $(window).on("scroll", function () {
+  }
 
-    let section = $("#text-section");
-    let offsetTop = section.offset().top;
-    let sectionHeight = section.outerHeight();
-    let scrollPos = $(window).scrollTop();
-    let windowHeight = $(window).height();
-
-    // نسبة دخول السكشن (0 → 1)
-    let progress = (scrollPos + windowHeight - offsetTop) / (sectionHeight + windowHeight);
-
-    if (progress < 0) progress = 0;
-    if (progress > 1) progress = 1;
-
-    // اجمع كل الحروف
-    let allChars = section.find("span");
-    let charsCount = allChars.length;
-
-    // عدد الحروف اللي تتلون
-    let coloredChars = Math.floor(charsCount * progress);
-
-    // شيل التلوين من الكل
-    allChars.removeClass("active");
-
-    // فعّل التلوين حسب التقدم
-    allChars.slice(0, coloredChars).addClass("active");
-
-  });
 
 });
 
