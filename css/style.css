@@ -706,11 +706,13 @@ nav.navbar {
    color: var(--white);
 }
 
+.services .title p,
 .about-txt li,
 .about-feature p {
    color: #4D4D4D;
 }
 
+.services .title p,
 .about-txt li {
    border-inline-start: 3px solid rgba(var(--secOp), .5);
    padding-inline-start: 1rem;
