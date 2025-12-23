@@ -44,6 +44,12 @@
     <!-- nice select link -->
     <link rel="stylesheet" href="css/nice-select.css" />
 
+    <!-- select2 link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="css/animate.min.css" />
 
     <!-- custom css file link  -->
@@ -141,7 +147,7 @@
                 <a class="nav-link" href="projects.html">Projects</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="careers.html">Careers</a>
+                <a class="nav-link active" href="careers.html">Careers</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="FAQ.html">FAQ</a>
@@ -171,10 +177,11 @@
     <!------------- breadcrumb section ------------->
     <nav class="breadcrumb-wrapper dark-bg" aria-label="breadcrumb">
       <div class="container-fluid">
-        <div class="breadcrumb-title">FAQ</div>
+        <div class="breadcrumb-title">apply now</div>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">faq</li>
+          <li class="breadcrumb-item"><a href="careers.html">careers</a></li>
+          <li class="breadcrumb-item active" aria-current="page">apply now</li>
         </ol>
         <img
           src="images/Efficient-training.png"
@@ -184,140 +191,256 @@
       </div>
     </nav>
 
-    <!------------- Privacy Policy section -------------->
-    <section class="policy py-5">
+    <!------------- careers section -------------->
+    <section class="careers py-5">
       <div class="container-fluid">
-        <div class="title mb-4">
-          <small class="secName"> Privacy Policy </small>
-          <h2 class="secTitle">Last updated:18 March, 2025</h2>
+        <form action="">
+          <div class="contact-us">
+            <div class="row align-items-center justify-content-between">
+              <div class="col-md-4">
+                <div class="title">
+                  <small class="secName">apply now</small>
+                  <h2 class="secTitle">
+                    Fill out your application and we’ll get in touch with you
+                    soon.
+                  </h2>
+                </div>
+              </div>
+              <div class="col-md-7">
+                <div class="row g-3">
+                  <div class="col-12">
+                    <div class="form-group">
+                      <label for="">Your Name *</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        value=""
+                        placeholder="FIRST NAME"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="form-group">
+                      <label for="">Your Email *</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        value=""
+                        placeholder="Email"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="form-group">
+                      <label>Work Phone *</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        value=""
+                        placeholder="enter your phone"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="form-group">
+                      <label for="">Upload File *</label>
+                      <div class="file-input form-control position-relative">
+                        <input
+                          type="file"
+                          id="CV"
+                          accept=".pdf,.doc,.docx,.txt"
+                        />
+                        <div class="upload-icon">
+                          <i class="bi bi-cloud-upload"></i>
+                        </div>
+
+                        <small>upload files  </small>
+
+                        <small>
+                          PDF, JPG, PNG, JPEG – maximum 5 MB per file
+                        </small>
+
+                        <span class="label" data-js-label=""></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="main-btn px-5 mt-3 w-100">
+                  <span>submit</span>
+                  <i class="bi bi-arrow-right-circle"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!------------- FQA section -------------->
+    <section class="FQA pt-5">
+      <div class="container-fluid">
+        <div class="title text-center mb-4">
+          <small class="secName justify-content-center"> FQA </small>
+          <h2 class="secTitle">You Asked,We Answered</h2>
         </div>
-        <div class="policy-txt">
-          <p>By using our services, you agree to be bound by these terms.</p>
-          <ul>
-            <li>
-              <p>Our Rights:</p>
-              <ul>
-                <li>
-                  We reserve the right to modify or terminate our services, in
-                  whole or in part, at our discretion and without prior notice.
-                </li>
-                <li>
-                  We also reserve the right to refuse service to any user for
-                  any reason.
-                </li>
-              </ul>
-            </li>
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="false"
+                aria-controls="collapseOne"
+              >
+                How Are Service Prices Determined?
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                It’s a legally binding, signed, and stamped document specifying
+                the requested service, pricing, and completion timeline,
+                safeguarding both parties under Kuwaiti regulations; contracts
+                can be executed online for convenience
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                Is Visiting Our Center Mandatory to Avail Services?
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                It’s a legally binding, signed, and stamped document specifying
+                the requested service, pricing, and completion timeline,
+                safeguarding both parties under Kuwaiti regulations; contracts
+                can be executed online for convenience
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                What Constitutes a Service Contract?
+              </button>
+            </h2>
+            <div
+              id="collapseThree"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                It’s a legally binding, signed, and stamped document specifying
+                the requested service, pricing, and completion timeline,
+                safeguarding both parties under Kuwaiti regulations; contracts
+                can be executed online for convenience
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapsefour"
+                aria-expanded="false"
+                aria-controls="collapsefour"
+              >
+                How Do I Apply for Study Abroad Visa Services?
+              </button>
+            </h2>
+            <div
+              id="collapsefour"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                It’s a legally binding, signed, and stamped document specifying
+                the requested service, pricing, and completion timeline,
+                safeguarding both parties under Kuwaiti regulations; contracts
+                can be executed online for convenience
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <li>
-              <p>Disclaimer:</p>
-              <ul>
-                <li>
-                  Our services are provided "as is" without any warranties of
-                  any kind.
-                </li>
-                <li>
-                  We do not guarantee the accuracy, reliability, or availability
-                  of any data or information accessed through our services.
-                </li>
-              </ul>
-            </li>
-
-            <li>
-              <p>Indemnification:</p>
-              <ul>
-                <li>
-                  You agree to indemnify and hold us harmless from any claims,
-                  damages, losses, or liabilities arising from your use of our
-                  services.
-                </li>
-              </ul>
-            </li>
-
-            <li>
-              <p>Modifications:</p>
-              <ul>
-                <li>
-                  These terms are subject to change at any time and without
-                  notice.
-                </li>
-              </ul>
-            </li>
-
-            <li>
-              <p>Use of Service:</p>
-              <ul>
-                <li>
-                  Our services may not be used for any illegal purposes or in
-                  violation of applicable regulations.
-                </li>
-                <li>
-                  You must comply with all laws and regulations when using our
-                  services, and not misuse them in any way.
-                </li>
-              </ul>
-            </li>
-
-            <li>
-              <p>Intellectual Property:</p>
-              <ul>
-                <li>
-                  All content, designs, trademarks, and software related to
-                  "Mudeer" are protected by intellectual property laws and may
-                  not be reproduced or used without prior written permission.
-                </li>
-                <li>
-                  Your use of our services does not grant you any intellectual
-                  property rights over them or any content made available within
-                  them.
-                </li>
-              </ul>
-            </li>
-
-            <li>
-              <p>Account Termination:</p>
-              <ul>
-                <li>
-                  We reserve the right to suspend or terminate your account if
-                  you violate these terms or if we believe your use of the
-                  service may harm us or other users.
-                </li>
-                <li>
-                  You may request deletion of your account at any time via the
-                  settings or by contacting us.
-                </li>
-              </ul>
-            </li>
-
-            <li>
-              <p>Privacy and Data Protection:</p>
-              <ul>
-                <li>
-                  Your use of our services is subject to our Privacy Policy,
-                  which explains how your data is collected and processed.
-                </li>
-                <li>
-                  By using the service, you agree to the data processing
-                  practices outlined in the Privacy Policy.
-                </li>
-              </ul>
-            </li>
-
-            <li>
-              <p>Limitation of Liability:</p>
-              <ul>
-                <li>
-                  We are not responsible for any technical failures, data
-                  losses, or indirect damages that may result from using our
-                  services.
-                </li>
-                <li>
-                  We will not be liable for any actions taken by users within
-                  the service, and responsibility for content used within
-                  "Mudeer" rests with its creator.
-                </li>
-              </ul>
-            </li>
-          </ul>
+    <!------------- contact section -------------->
+    <section class="contact-us pb-5">
+      <div class="container-fluid">
+        <div class="contact-data">
+          <div class="row row-cols-md-3 row-cols-1 align-items-center gy-4">
+            <!-- e-mail -->
+            <div class="col">
+              <div class="contact-info">
+                <div class="contact-wrapper">
+                  <i class="bi bi-envelope"></i>
+                  <p class="fw-bold fs-5 my-1">Email</p>
+                  <div class="d-flex gap-2 align-content-center">
+                    <a href="mailto:info@humantechkw.com"
+                      >info@humantechkw.com</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- phone -->
+            <div class="col">
+              <div class="contact-info">
+                <div class="contact-wrapper">
+                  <i class="bi bi-telephone"></i>
+                  <p class="fw-bold fs-5 my-1">Phone</p>
+                  <div class="d-flex gap-2 align-content-center">
+                    <a href="tel:+9659717395">+965 9717 395</a>
+                    <a href="tel:+9650994790">+965 0994 790</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- location -->
+            <div class="col">
+              <div class="contact-info">
+                <div class="contact-wrapper">
+                  <i class="bi bi-geo-alt"></i>
+                  <p class="fw-bold fs-5 my-1">Address</p>
+                  <div class="d-flex flex-column gap-2">
+                    <p class="text-muted">Street 35, 10004 Hawaii, Kuwait</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -387,7 +510,10 @@
                   <h4 class="fs-6">Company</h4>
                   <ul class="navbar-nav mb-0">
                     <li class="nav-item">
-                      <a class="nav-link" aria-current="page" href="index.html"
+                      <a
+                        class="nav-link active"
+                        aria-current="page"
+                        href="index.html"
                         >Home</a
                       >
                     </li>
@@ -395,9 +521,7 @@
                       <a class="nav-link" href="about.html">About Us</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link active" href="services.html"
-                        >Services</a
-                      >
+                      <a class="nav-link" href="services.html">Services</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="projects.html">projects</a>
@@ -466,6 +590,9 @@
 
     <!-- nice select script -->
     <script src="js/jquery.nice-select.min.js"></script>
+
+    <!-- select2 script -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
     <script src="js/wow.min.js"></script>
 

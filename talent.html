@@ -44,6 +44,12 @@
     <!-- nice select link -->
     <link rel="stylesheet" href="css/nice-select.css" />
 
+    <!-- select2 link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="css/animate.min.css" />
 
     <!-- custom css file link  -->
@@ -82,7 +88,7 @@
           >
             <ul class="navbar-nav gap-2 mb-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html"
+                <a class="nav-link" aria-current="page" href="index.html"
                   >Home</a
                 >
               </li>
@@ -141,7 +147,7 @@
                 <a class="nav-link" href="projects.html">Projects</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="careers.html">Careers</a>
+                <a class="nav-link active" href="careers.html">Careers</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="FAQ.html">FAQ</a>
@@ -168,208 +174,178 @@
       </nav>
     </header>
 
-    <!------------- hero section ------------->
-    <div class="hero-sec">
+    <!------------- breadcrumb section ------------->
+    <nav class="breadcrumb-wrapper dark-bg" aria-label="breadcrumb">
       <div class="container-fluid">
-        <div class="header-content">
-          <div class="content">
-            <h1 class="Ftitle mb-0">
-              <span>Gateway to Manpower</span>
-              <br />
-              <span
-                >WELCOME TO
-                <img src="images/hti-before.svg" alt="" />
-                <span class="siteName">HUMAN TECH.</span>
-              </span>
-            </h1>
-            <div class="hero-text col-md-8 text-center">
-              <p>
-                Human Tech – Kuwait’s leader in manpower, training, marketing,
-                and consulting – empowering your business and personal success.
-              </p>
-            </div>
-
-            <div class="hero-action d-flex align-items-center gap-2 my-4">
-              <a href="talent.html" class="btn main-btn">
-                <span>Hire a Talent</span>
-                <i class="bi bi-arrow-right-circle"></i>
-              </a>
-              <a href="careers.html" class="btn main-outline-btn">
-                <span>Find a Job</span>
-              </a>
-            </div>
-
-            <img class="hero-img" src="images/Efficient-training.png" alt="" />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!------------- about section ------------->
-    <section class="about dark-bg">
-      <div class="container-fluid position-relative">
-        <div class="row gy-3 gx-md-5">
-          <div class="col-lg-5">
-            <small class="secName"> About Our Comapny</small>
-            <div class="about-content">
-              <p>
-                Established in 2001 and became part of an international holding
-                group. We serve diverse sectors including hospitality,
-                petrochemicals, medicine, technology, and others, providing
-                flexible and customized solutions supported by more than 15,000
-                contracted employees daily and 150,000 candidates in our
-                database.
-              </p>
-            </div>
-            <a
-              href="about.html"
-              class="btn btn-outline-light rounded-pill px-4 mt-3"
-            >
-              <span>Read More</span>
-            </a>
-          </div>
-          <div class="col-lg-7">
-            <small> A new type of design model </small>
-            <div id="text-section" class="text-section">
-              <p class="scroll-text">YOUR GATEWAY TO MANPOWER,</p>
-              <p class="scroll-text">TRAINING & CONSULTING</p>
-              <p class="scroll-text">INCLUDING HOSPITALITY</p>
-              <p class="scroll-text">petrochemicals,</p>
-              <p class="scroll-text">technology.</p>
-              <p class="scroll-text">medicine,</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!------------- services section -------------->
-    <section class="services">
-      <div class="container-fluid">
-        <div class="d-md-flex align-items-center justify-content-between">
-          <div class="title">
-            <small class="secName"> Our Services</small>
-            <h2 class="secTitle">Explore our Services</h2>
-          </div>
-          <a
-            href="about.html"
-            class="btn btn-outline-secondary rounded-pill px-4"
-          >
-            <span>view all projects</span>
-          </a>
-        </div>
-        <ol>
-          <li class="serv position-relative">
-            <a href="service-details.html" class="link"></a>
-            <div class="serv-num"></div>
-            <div class="row justify-content-between align-items-center">
-              <div class="col-md-4">
-                <div class="serv-title">
-                  Manpower Supply & Recruitment Solutions
-                </div>
-              </div>
-              <div class="col-md-5">
-                <div class="serv-desc">
-                  <p>
-                    We provide scalable manpower supply for permanent and
-                    including bulk marketing, support, beauty, medical,and
-                    technical staff.
-                  </p>
-                  <a href="service-details.html" class="show">
-                    <i class="bi bi-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="serv position-relative">
-            <a href="service-details.html" class="link"></a>
-            <div class="serv-num"></div>
-            <div class="row justify-content-between align-items-center">
-              <div class="col-md-4">
-                <div class="serv-title">Training Services</div>
-              </div>
-              <div class="col-md-5">
-                <div class="serv-desc">
-                  <p>
-                    We offer specialized training and workshops , we provide
-                    programs for administration, doctors,  nurses, and staff.
-                  </p>
-                  <a href="service-details.html" class="show">
-                    <i class="bi bi-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="serv position-relative">
-            <a href="service-details.html" class="link"></a>
-            <div class="serv-num"></div>
-            <div class="row justify-content-between align-items-center">
-              <div class="col-md-4">
-                <div class="serv-title">Advertising Agency Services</div>
-              </div>
-              <div class="col-md-5">
-                <div class="serv-desc">
-                  <p>
-                    Our advertising team builds and executes marketing campaigns
-                    to elevate your brand.Campaign strategy, creative design,
-                    and execution.
-                  </p>
-                  <a href="service-details.html" class="show">
-                    <i class="bi bi-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
+        <div class="breadcrumb-title">hire a talent</div>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">
+            hire a talent
           </li>
         </ol>
+        <img
+          src="images/Efficient-training.png"
+          alt=""
+          class="breadcrumb-img"
+        />
       </div>
-    </section>
+    </nav>
 
-    <!------------- Industries section -------------->
-    <section class="industries dark-bg">
-      <div class="container-fluid position-relative">
-        <div class="title mb-5">
-          <small class="secName">Industries We Serve</small>
-        </div>
-        <div class="owl-marquee owl-carousel">
-          <div class="item">Aviation | Pharmaceutical</div>
-          <div class="item">Beauty Spa & Salon | Public Sector</div>
-          <div class="item">Petrochemical | Telecommunication</div>
-          <div class="item">Hospitality | Technical</div>
-          <div class="item">Financial Services | Retail</div>
-        </div>
-      </div>
-    </section>
-
-    <!------------- JOB Banner section -------------->
-    <section class="banner-wrapper pty-5 my-5">
+    <!------------- hire a talent section -------------->
+    <section class="careers talent py-5">
       <div class="container-fluid">
-        <div class="banner position-relative">
-          <div class="overlay"></div>
-          <div
-            class="banner-content position-relative z-3 col-lg-9 m-auto col-12"
-          >
-            <p class="banner-title">
-              <span
-                >Welcome To
-                <b class="siteName">Human Tech.</b>
-              </span>
-            </p>
-            <img src="images/logo.svg" alt="" />
-            <p>
-              Discover exceptional career opportunities at Human Tech! Find your
-              job in manpower, training, marketing, or consulting fields.
-            </p>
-            <a
-              href="careers.html"
-              class="btn btn-light px-4 py-2 mt-3 rounded-pill"
-            >
-              Browse Available Jobs
-            </a>
+        <div class="talent-slider">
+          <div class="title mb-3">
+            <small class="secName">Add new talent to your team</small>
+          </div>
+
+          <div class="owl-carousel">
+            <div class="card">
+              <div class="card-img-top">
+                <img
+                  src="images/talent (1).png"
+                  loading="lazy"
+                  alt=""
+                />
+              </div>
+              <div class="card-body">
+                <h3 class="card-title fs-5">Eng Ahmed Khaled</h3>
+                <p class="fs-6">CEO</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/talent (2).png" loading="lazy" alt="" />
+              </div>
+              <div class="card-body">
+                <h3 class="card-title fs-5">Eng Mona Abdelrahman</h3>
+                <p class="fs-6">Project Manager</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img-top">
+                <img
+                  src="images/talent (3).png"
+                  loading="lazy"
+                  alt=""
+                />
+              </div>
+              <div class="card-body">
+                <h3 class="card-title fs-5">Eng Ahmed Khaled</h3>
+                <p class="fs-6">CEO</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/talent (1).png" loading="lazy" alt="" />
+              </div>
+              <div class="card-body">
+                <h3 class="card-title fs-5">Eng Mona Abdelrahman</h3>
+                <p class="fs-6">Project Manager</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/talent (2).png" loading="lazy" alt="" />
+              </div>
+              <div class="card-body">
+                <h3 class="card-title fs-5">Eng Mona Abdelrahman</h3>
+                <p class="fs-6">Project Manager</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img-top">
+                <img
+                  src="images/talent (3).png"
+                  loading="lazy"
+                  alt=""
+                />
+              </div>
+              <div class="card-body">
+                <h3 class="card-title fs-5">Eng Ahmed Khaled</h3>
+                <p class="fs-6">CEO</p>
+              </div>
+            </div>
           </div>
         </div>
+
+        <form action="">
+          <div class="contact-us">
+            <div class="row align-items-center justify-content-between">
+              <div class="col-md-4">
+                <div class="title">
+                  <small class="secName">Let’s Connect</small>
+                  <h2 class="secTitle">Connect with us</h2>
+                </div>
+              </div>
+              <div class="col-md-7">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="">FIRST NAME</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        value=""
+                        placeholder="FIRST NAME"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>phone number</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        value=""
+                        placeholder="enter your phone"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="">EMAIL</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        value=""
+                        placeholder="Email"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="">Role</label>
+                      <select class="form-select form-control" name="Location">
+                        <option value="" hidden="">Select Role</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="form-group">
+                      <label for="">MESSAGE</label>
+                      <textarea
+                        class="form-control"
+                        placeholder="Your Message"
+                        style="height: 160px"
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="main-btn px-5 mt-3 w-100">
+                  <span>submit</span>
+                  <i class="bi bi-arrow-right-circle"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
       </div>
     </section>
 
@@ -499,7 +475,7 @@
               <div class="contact-info">
                 <div class="contact-wrapper">
                   <i class="bi bi-envelope"></i>
-                  <p class="fw-bold fs-5 my-1">Email</p>
+                  <p class="fs-6 my-1">Email</p>
                   <div class="d-flex gap-2 align-content-center">
                     <a href="mailto:info@humantechkw.com"
                       >info@humantechkw.com</a
@@ -513,7 +489,7 @@
               <div class="contact-info">
                 <div class="contact-wrapper">
                   <i class="bi bi-telephone"></i>
-                  <p class="fw-bold fs-5 my-1">Phone</p>
+                  <p class="fs-6 my-1">Phone</p>
                   <div class="d-flex gap-2 align-content-center">
                     <a href="tel:+9659717395">+965 9717 395</a>
                     <a href="tel:+9650994790">+965 0994 790</a>
@@ -526,7 +502,7 @@
               <div class="contact-info">
                 <div class="contact-wrapper">
                   <i class="bi bi-geo-alt"></i>
-                  <p class="fw-bold fs-5 my-1">Address</p>
+                  <p class="fs-6 my-1">Address</p>
                   <div class="d-flex flex-column gap-2">
                     <p class="text-muted">Street 35, 10004 Hawaii, Kuwait</p>
                   </div>
@@ -683,6 +659,9 @@
 
     <!-- nice select script -->
     <script src="js/jquery.nice-select.min.js"></script>
+
+    <!-- select2 script -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
     <script src="js/wow.min.js"></script>
 

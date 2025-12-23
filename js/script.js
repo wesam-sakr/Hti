@@ -19,7 +19,7 @@ $('#loading').fadeOut(3000);
 // make navbar fixed while scrolling
 $(document).ready(function () {
 
-  if($(".scroll-text").length>0){
+  if ($(".scroll-text").length > 0) {
     // 1) تقسيم كل جملة لـ حروف داخل span
     $(".scroll-text").each(function () {
       let text = $(this).text().trim();
@@ -29,76 +29,76 @@ $(document).ready(function () {
       }
       $(this).html(html);
     });
-  
+
     // 2) التلوين مع الاسكرول
     $(window).on("scroll", function () {
-  
+
       let section = $("#text-section");
       let offsetTop = section.offset().top;
       let sectionHeight = section.outerHeight();
       let scrollPos = $(window).scrollTop();
       let windowHeight = $(window).height();
-  
+
       // نسبة دخول السكشن (0 → 1)
       let progress = (scrollPos + windowHeight - offsetTop) / (sectionHeight + windowHeight);
-  
+
       if (progress < 0) progress = 0;
       if (progress > 1) progress = 1;
-  
+
       // اجمع كل الحروف
       let allChars = section.find("span");
       let charsCount = allChars.length;
-  
+
       // عدد الحروف اللي تتلون
       let coloredChars = Math.floor(charsCount * progress);
-  
+
       // شيل التلوين من الكل
       allChars.removeClass("active");
-  
+
       // فعّل التلوين حسب التقدم
       allChars.slice(0, coloredChars).addClass("active");
-  
+
     });
 
   }
 
+  let started = false;
+  function animateCounters() {
+    $('.counter').each(function () {
+      let $this = $(this);
+      let target = +$this.attr('data-target');
+
+      $({ countNum: $this.text() }).animate(
+        { countNum: target },
+        {
+          duration: 2000,
+          easing: 'swing',
+          step: function () {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function () {
+            $this.text(this.countNum);
+          }
+        }
+      );
+    });
+  }
+
+  if ($('#stats').length > 0) {
+    $(window).on('scroll', function () {
+      let top = $('#stats').offset().top - window.innerHeight + 100;
+      if (!started && $(window).scrollTop() > top) {
+        animateCounters();
+        started = true;
+      }
+    });
+
+  }
 
 });
 
 
 
-let started = false;
-function animateCounters() {
-  $('.counter').each(function () {
-    let $this = $(this);
-    let target = +$this.attr('data-target');
-
-    $({ countNum: $this.text() }).animate(
-      { countNum: target },
-      {
-        duration: 2000,
-        easing: 'swing',
-        step: function () {
-          $this.text(Math.floor(this.countNum));
-        },
-        complete: function () {
-          $this.text(this.countNum);
-        }
-      }
-    );
-  });
-}
-
-if ($('#stats').length > 0) {
-  $(window).on('scroll', function () {
-    let top = $('#stats').offset().top - window.innerHeight + 100;
-    if (!started && $(window).scrollTop() > top) {
-      animateCounters();
-      started = true;
-    }
-  });
-
-}
 
 
 $(document).ready(function () {
@@ -169,11 +169,7 @@ $(document).ready(function () {
     var number = $(this).index();
     main.data("owl.carousel").to(number, 300, true);
   });
-});
 
-
-// owl carousel
-$(document).ready(function () {
   $('.industries .owl-carousel').owlCarousel({
     autoplay: true,
     rewind: false,
@@ -203,55 +199,7 @@ $(document).ready(function () {
     }
   });
 
-  function NumOf(n) {
-    return (n < 10 && n != 0) ? '0' + n : '' + n;
-  }
-  $('.hero-sec .owl-carousel').on('initialized.owl.carousel changed.owl.carousel', function (e) {
-    if (!e.namespace) {
-      return;
-    }
-    var carousel = e.relatedTarget;
-    $('.silder-attach').html(`
-        <div class="slider-counter">
-          <span class="current">${NumOf(carousel.relative(carousel.current()) + 1)}</span>
-          <span class="len mx-1">/</span>
-          <span class="len"> ${NumOf(carousel.items().length)} </span>
-        </div>
-        `);
-  }).owlCarousel({
-    items: 1,
-    rtl: dirAr,
-    loop: true,
-    margin: 60,
-    stagePadding: 10,
-    nav: false,
-    autoplay: true,
-    animateOut: 'fadeOut',
-  });
-
-
-
-  $('.testimonials .owl-carousel').owlCarousel({
-    margin: 16,
-    responsiveClass: true,
-    rtl: dirAr,
-    nav: false,
-    animateIn: 'fadeInLeft',
-    stagePadding: 30,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      600: {
-        items: 2,
-      },
-      1000: {
-        items: 3,
-      }
-    }
-  });
-
-  $('.our_team .owl-carousel').owlCarousel({
+  $('.talent-slider .owl-carousel').owlCarousel({
     margin: 16,
     responsiveClass: true,
     rtl: dirAr,
@@ -267,53 +215,51 @@ $(document).ready(function () {
         items: 3,
       },
       1000: {
-        items: 4,
-      }
-    }
-  });
-
-  $('.related_projects .owl-carousel').owlCarousel({
-    margin: 16,
-    responsiveClass: true,
-    rtl: dirAr,
-    nav: false,
-    autoplay: true,
-    loop: true,
-    animateIn: 'fadeInLeft',
-    responsive: {
-      0: {
-        items: 1,
-      },
-      600: {
-        items: 2,
-      },
-      1000: {
         items: 3,
       }
     }
   });
 
+  // apply job upload cv
+  $(".file-input").change(function () {
+    const fileInput = $(this).find('[type="file"]')[0];
+    const label = $(this).find("[data-js-label]")[0];
+    console.log($(fileInput).val());
+    if (!$(fileInput).val()) return;
+    var value = $(fileInput)
+      .val()
+      .replace(/^.*[\\\/]/, "");
+    $(label).html(value);
+  });
+
+
+  // scroll to top page
+  var btn_top = $('#scrollUp');
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > 300) {
+      btn_top.show();
+    } else {
+      btn_top.hide();
+    }
+  });
+
+  $('select').select2();
+
+  $('[data-fancybox]').fancybox({
+    buttons: [
+      "zoom",
+      "share",
+      "slideShow",
+      "fullScreen",
+      "download",
+      "thumbs",
+      "close"
+    ]
+  });
 });
 
-// scroll to top page
-var btn_top = $('#scrollUp');
-$(window).scroll(function () {
-  if ($(window).scrollTop() > 300) {
-    btn_top.show();
-  } else {
-    btn_top.hide();
-  }
-});
 
 
-$('[data-fancybox]').fancybox({
-  buttons: [
-    "zoom",
-    "share",
-    "slideShow",
-    "fullScreen",
-    "download",
-    "thumbs",
-    "close"
-  ]
-});
+
+
+

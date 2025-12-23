@@ -44,6 +44,12 @@
     <!-- nice select link -->
     <link rel="stylesheet" href="css/nice-select.css" />
 
+    <!-- select2 link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="css/animate.min.css" />
 
     <!-- custom css file link  -->
@@ -82,7 +88,7 @@
           >
             <ul class="navbar-nav gap-2 mb-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html"
+                <a class="nav-link" aria-current="page" href="index.html"
                   >Home</a
                 >
               </li>
@@ -141,7 +147,7 @@
                 <a class="nav-link" href="projects.html">Projects</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="careers.html">Careers</a>
+                <a class="nav-link active" href="careers.html">Careers</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="FAQ.html">FAQ</a>
@@ -168,206 +174,177 @@
       </nav>
     </header>
 
-    <!------------- hero section ------------->
-    <div class="hero-sec">
+    <!------------- breadcrumb section ------------->
+    <nav class="breadcrumb-wrapper dark-bg" aria-label="breadcrumb">
       <div class="container-fluid">
-        <div class="header-content">
-          <div class="content">
-            <h1 class="Ftitle mb-0">
-              <span>Gateway to Manpower</span>
-              <br />
-              <span
-                >WELCOME TO
-                <img src="images/hti-before.svg" alt="" />
-                <span class="siteName">HUMAN TECH.</span>
-              </span>
-            </h1>
-            <div class="hero-text col-md-8 text-center">
-              <p>
-                Human Tech – Kuwait’s leader in manpower, training, marketing,
-                and consulting – empowering your business and personal success.
-              </p>
-            </div>
-
-            <div class="hero-action d-flex align-items-center gap-2 my-4">
-              <a href="talent.html" class="btn main-btn">
-                <span>Hire a Talent</span>
-                <i class="bi bi-arrow-right-circle"></i>
-              </a>
-              <a href="careers.html" class="btn main-outline-btn">
-                <span>Find a Job</span>
-              </a>
-            </div>
-
-            <img class="hero-img" src="images/Efficient-training.png" alt="" />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!------------- about section ------------->
-    <section class="about dark-bg">
-      <div class="container-fluid position-relative">
-        <div class="row gy-3 gx-md-5">
-          <div class="col-lg-5">
-            <small class="secName"> About Our Comapny</small>
-            <div class="about-content">
-              <p>
-                Established in 2001 and became part of an international holding
-                group. We serve diverse sectors including hospitality,
-                petrochemicals, medicine, technology, and others, providing
-                flexible and customized solutions supported by more than 15,000
-                contracted employees daily and 150,000 candidates in our
-                database.
-              </p>
-            </div>
-            <a
-              href="about.html"
-              class="btn btn-outline-light rounded-pill px-4 mt-3"
-            >
-              <span>Read More</span>
-            </a>
-          </div>
-          <div class="col-lg-7">
-            <small> A new type of design model </small>
-            <div id="text-section" class="text-section">
-              <p class="scroll-text">YOUR GATEWAY TO MANPOWER,</p>
-              <p class="scroll-text">TRAINING & CONSULTING</p>
-              <p class="scroll-text">INCLUDING HOSPITALITY</p>
-              <p class="scroll-text">petrochemicals,</p>
-              <p class="scroll-text">technology.</p>
-              <p class="scroll-text">medicine,</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!------------- services section -------------->
-    <section class="services">
-      <div class="container-fluid">
-        <div class="d-md-flex align-items-center justify-content-between">
-          <div class="title">
-            <small class="secName"> Our Services</small>
-            <h2 class="secTitle">Explore our Services</h2>
-          </div>
-          <a
-            href="about.html"
-            class="btn btn-outline-secondary rounded-pill px-4"
-          >
-            <span>view all projects</span>
-          </a>
-        </div>
-        <ol>
-          <li class="serv position-relative">
-            <a href="service-details.html" class="link"></a>
-            <div class="serv-num"></div>
-            <div class="row justify-content-between align-items-center">
-              <div class="col-md-4">
-                <div class="serv-title">
-                  Manpower Supply & Recruitment Solutions
-                </div>
-              </div>
-              <div class="col-md-5">
-                <div class="serv-desc">
-                  <p>
-                    We provide scalable manpower supply for permanent and
-                    including bulk marketing, support, beauty, medical,and
-                    technical staff.
-                  </p>
-                  <a href="service-details.html" class="show">
-                    <i class="bi bi-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="serv position-relative">
-            <a href="service-details.html" class="link"></a>
-            <div class="serv-num"></div>
-            <div class="row justify-content-between align-items-center">
-              <div class="col-md-4">
-                <div class="serv-title">Training Services</div>
-              </div>
-              <div class="col-md-5">
-                <div class="serv-desc">
-                  <p>
-                    We offer specialized training and workshops , we provide
-                    programs for administration, doctors,  nurses, and staff.
-                  </p>
-                  <a href="service-details.html" class="show">
-                    <i class="bi bi-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="serv position-relative">
-            <a href="service-details.html" class="link"></a>
-            <div class="serv-num"></div>
-            <div class="row justify-content-between align-items-center">
-              <div class="col-md-4">
-                <div class="serv-title">Advertising Agency Services</div>
-              </div>
-              <div class="col-md-5">
-                <div class="serv-desc">
-                  <p>
-                    Our advertising team builds and executes marketing campaigns
-                    to elevate your brand.Campaign strategy, creative design,
-                    and execution.
-                  </p>
-                  <a href="service-details.html" class="show">
-                    <i class="bi bi-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </li>
+        <div class="breadcrumb-title">careers</div>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">careers</li>
         </ol>
+        <img
+          src="images/Efficient-training.png"
+          alt=""
+          class="breadcrumb-img"
+        />
       </div>
-    </section>
+    </nav>
 
-    <!------------- Industries section -------------->
-    <section class="industries dark-bg">
-      <div class="container-fluid position-relative">
-        <div class="title mb-5">
-          <small class="secName">Industries We Serve</small>
-        </div>
-        <div class="owl-marquee owl-carousel">
-          <div class="item">Aviation | Pharmaceutical</div>
-          <div class="item">Beauty Spa & Salon | Public Sector</div>
-          <div class="item">Petrochemical | Telecommunication</div>
-          <div class="item">Hospitality | Technical</div>
-          <div class="item">Financial Services | Retail</div>
-        </div>
-      </div>
-    </section>
-
-    <!------------- JOB Banner section -------------->
-    <section class="banner-wrapper pty-5 my-5">
+    <!------------- careers section -------------->
+    <section class="careers py-5">
       <div class="container-fluid">
-        <div class="banner position-relative">
-          <div class="overlay"></div>
-          <div
-            class="banner-content position-relative z-3 col-lg-9 m-auto col-12"
-          >
-            <p class="banner-title">
-              <span
-                >Welcome To
-                <b class="siteName">Human Tech.</b>
-              </span>
-            </p>
-            <img src="images/logo.svg" alt="" />
-            <p>
-              Discover exceptional career opportunities at Human Tech! Find your
-              job in manpower, training, marketing, or consulting fields.
-            </p>
-            <a
-              href="careers.html"
-              class="btn btn-light px-4 py-2 mt-3 rounded-pill"
-            >
-              Browse Available Jobs
-            </a>
+        <form action="">
+          <div class="career-filter row gy-md-0 gx-3 gy-3">
+            <div class="col-md-3">
+              <input
+                type="text"
+                name="search"
+                value=""
+                class="form-control"
+                placeholder="Search by keyword..."
+              />
+            </div>
+            <div class="col-md-3">
+              <select name="cateogery" class="form-select form-control">
+                <option value="">cateogery</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <select class="form-select form-control" name="Location">
+                <option value="" hidden="">Location</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <button
+                class="filter_search form-control d-flex align-items-center justify-content-between gap-3"
+              >
+                <span>Search</span>
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 g-3 mt-4">
+          <div class="col">
+            <div class="career">
+              <h3 class="fw-bold fs-6 mb-0">Full Stack Developer</h3>
+              <p>
+                We are hiring a skilled Full Stack Developer on a contract basis
+                (6 months) to join our team.
+              </p>
+              <a href="apply.html" class="apply-btn">Apply Now</a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="career">
+              <h3 class="fw-bold fs-6 mb-0">Full Stack Developer</h3>
+              <p>
+                We are hiring a skilled Full Stack Developer on a contract basis
+                (6 months) to join our team.
+              </p>
+              <a href="apply.html" class="apply-btn">Apply Now</a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="career">
+              <h3 class="fw-bold fs-6 mb-0">Full Stack Developer</h3>
+              <p>
+                We are hiring a skilled Full Stack Developer on a contract basis
+                (6 months) to join our team.
+              </p>
+              <a href="apply.html" class="apply-btn">Apply Now</a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="career">
+              <h3 class="fw-bold fs-6 mb-0">Full Stack Developer</h3>
+              <p>
+                We are hiring a skilled Full Stack Developer on a contract basis
+                (6 months) to join our team.
+              </p>
+              <a href="apply.html" class="apply-btn">Apply Now</a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="career">
+              <h3 class="fw-bold fs-6 mb-0">Full Stack Developer</h3>
+              <p>
+                We are hiring a skilled Full Stack Developer on a contract basis
+                (6 months) to join our team.
+              </p>
+              <a href="apply.html" class="apply-btn">Apply Now</a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="career">
+              <h3 class="fw-bold fs-6 mb-0">Full Stack Developer</h3>
+              <p>
+                We are hiring a skilled Full Stack Developer on a contract basis
+                (6 months) to join our team.
+              </p>
+              <a href="apply.html" class="apply-btn">Apply Now</a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="career">
+              <h3 class="fw-bold fs-6 mb-0">Full Stack Developer</h3>
+              <p>
+                We are hiring a skilled Full Stack Developer on a contract basis
+                (6 months) to join our team.
+              </p>
+              <a href="apply.html" class="apply-btn">Apply Now</a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="career">
+              <h3 class="fw-bold fs-6 mb-0">Full Stack Developer</h3>
+              <p>
+                We are hiring a skilled Full Stack Developer on a contract basis
+                (6 months) to join our team.
+              </p>
+              <a href="apply.html" class="apply-btn">Apply Now</a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="career">
+              <h3 class="fw-bold fs-6 mb-0">Full Stack Developer</h3>
+              <p>
+                We are hiring a skilled Full Stack Developer on a contract basis
+                (6 months) to join our team.
+              </p>
+              <a href="apply.html" class="apply-btn">Apply Now</a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="career">
+              <h3 class="fw-bold fs-6 mb-0">Full Stack Developer</h3>
+              <p>
+                We are hiring a skilled Full Stack Developer on a contract basis
+                (6 months) to join our team.
+              </p>
+              <a href="apply.html" class="apply-btn">Apply Now</a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="career">
+              <h3 class="fw-bold fs-6 mb-0">Full Stack Developer</h3>
+              <p>
+                We are hiring a skilled Full Stack Developer on a contract basis
+                (6 months) to join our team.
+              </p>
+              <a href="apply.html" class="apply-btn">Apply Now</a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="career">
+              <h3 class="fw-bold fs-6 mb-0">Full Stack Developer</h3>
+              <p>
+                We are hiring a skilled Full Stack Developer on a contract basis
+                (6 months) to join our team.
+              </p>
+              <a href="apply.html" class="apply-btn">Apply Now</a>
+            </div>
           </div>
         </div>
       </div>
@@ -683,6 +660,9 @@
 
     <!-- nice select script -->
     <script src="js/jquery.nice-select.min.js"></script>
+
+    <!-- select2 script -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
     <script src="js/wow.min.js"></script>
 
